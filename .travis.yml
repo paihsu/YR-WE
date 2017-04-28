@@ -5,17 +5,6 @@ jdk:
 script:
   - ./mvnw test -B
 
-install:
-# update mvnw
-- mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
-- ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
-
-addons:
-   sonarqube:
-      organization: "paihsu-github"
-script:
-- jdk_switcher use oraclejdk8
-
 notifications:
   # Email notifications are disabled to not annoy anybody.
   # See http://about.travis-ci.org/docs/user/build-configuration/ to learn more
