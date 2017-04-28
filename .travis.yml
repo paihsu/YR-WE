@@ -1,10 +1,24 @@
 language: java
-script: mvn -Pitest -DargLine="-Dcom.basho.riak.search=true -Dcom.basho.riak.2i=true" clean verify
+jdk:
+  - oraclejdk8
+  
+script:
+  - ./mvnw test -B
+
+install:
+# update mvnw
+- mvn -N io.takari:maven:wrapper
+- ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+
+addons:
+   sonarqube:
+      organization: "paihsu-github"
+script:
+- jdk_switcher use oraclejdk8
+
 notifications:
   # Email notifications are disabled to not annoy anybody.
   # See http://about.travis-ci.org/docs/user/build-configuration/ to learn more
   # about configuring notification recipients and more.
- 
+  # webhooks:
   email: false
-services:
-  - riak
