@@ -1,5 +1,2 @@
-# spring2017-project-paihsu
-
-# Wedding Weight Planner
-
-[![Build Status](https://travis-ci.org/cpe305Spring17/spring2017-project-paihsu.svg?branch=master)](https://travis-ci.org/cpe305Spring17/spring2017-project-paihsu)
+Michaels Notes
+https://www.evernote.com/shard/s193/sh/bda2a79f-8277-4612-bdaf-307e371fcf36/d56c23b838681447
