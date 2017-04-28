@@ -1,4 +1,22 @@
+
 language: java
+jdk:
+  - oraclejdk8
+  
+script:
+  - ./mvnw test -B
+
+install:
+# update mvnw
+- mvn -N io.takari:maven:wrapper
+- ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+
+#addons:
+   #sonarqube:
+      # organization: "308309" //Not Working
+     # organization: "jnogle-github"
+script:
+ - sonar-scanner
 
 notifications:
   # Email notifications are disabled to not annoy anybody.
