@@ -1,5 +1,10 @@
 package main.java.base;
 
-public class GoldRepository {
+import org.springframework.data.repository.CrudRepository;
+
+import main.java.base.course.Course;
+
+public interface GoldRepository extends CrudRepository<Course, Long> {
 
 }
+
