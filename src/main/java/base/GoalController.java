@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/gold")
 public class GoalController {
 
-	private final GoldRepository goldRepository;
+	private GoldRepository goldRepository;
 	
 	public void GoldController(GoldRepository goldRepository) {
 		this.goldRepository = goldRepository;
