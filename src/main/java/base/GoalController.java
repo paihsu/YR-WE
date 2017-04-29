@@ -11,7 +11,7 @@ public class GoalController {
 
 	private final GoldRepository goldRepository;
 	
-	public GoldController(GoldRepository goldRepository) {
+	public void GoldController(GoldRepository goldRepository) {
 		this.goldRepository = goldRepository;
 		
 	}
