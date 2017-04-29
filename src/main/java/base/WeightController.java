@@ -11,9 +11,4 @@ public class WeightController {
     @Autowired
     private WeightRepository weightRepository;
 
-    
-    @PostMapping
-    public Weight update(@RequestBody Weight input) {
-        return weightRepository.save(new Weight(input.getCurrentWeight(), input.getDate()));
-    }
 }
