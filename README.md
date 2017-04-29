@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/paihsu/travis-ci-tutorial-java.svg?branch=master)](https://travis-ci.org/paihsu/travis-ci-tutorial-java)
+[![Build Status](https://travis-ci.org/cpe305Spring17/spring2017-project-paihsu.svg?branch=master)](https://travis-ci.org/cpe305Spring17/spring2017-project-paihsu)
 
 Wedding Weight Planner, (WWP) 
 
