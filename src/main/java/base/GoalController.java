@@ -11,8 +11,4 @@ public class GoalController {
 
 	private GoldRepository goldRepository;
 	
-	public void GoldController(GoldRepository goldRepository) {
-		this.goldRepository = goldRepository;
-		
-	}
 }
