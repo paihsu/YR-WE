@@ -14,5 +14,6 @@ install:
 addons:
   sonarqube:
     organization: "305"
+    
 script:
  - sonar-scanner
