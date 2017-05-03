@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/gold")
 public class GoalController {
 
-	private GoldRepository goldRepository;
+	//private GoldRepository goldRepository;
 	
 }
