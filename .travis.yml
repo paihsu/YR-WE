@@ -10,3 +10,9 @@ before_install:
 install:
 - mvn -N io.takari:maven:wrapper
 - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+
+addons:
+  sonarqube:
+    organization: "305"
+script:
+ - sonar-scanner
