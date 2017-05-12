@@ -3,7 +3,7 @@ package base;
 import org.springframework.data.repository.CrudRepository;
 
 
-public interface GoldRepository {
+public interface GoalRepository {
 
 }
 

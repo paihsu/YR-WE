@@ -1,12 +1,14 @@
 package base;
 
+import java.util.Date;
 
 public class Weight {
 	
 	private float currentWeight;
-	private String date;
+	private Date date;
 	
-	public Weight(float currentWeight, String date) {
+	
+	public Weight(float currentWeight, Date date) {
 		this.currentWeight = currentWeight;
 		this.date = date;
 	}
@@ -17,16 +19,16 @@ public class Weight {
 	    return currentWeight;
 	  }
 	  
-	  public void setCurrentWeight(float currentWeight) {
+	  public void setCurrentWeight(float currentWeight) {  
 	    this.currentWeight = currentWeight;
+	    date = new Date();
+	    
 	  }
 	  
-	  public String getDate() {
+	  public Date getDate() {
 	    return date;
 	  }
 	  
-	  public void setDate(String date) {
-	    this.date = date;
-	  }
+	 
 	  
 }

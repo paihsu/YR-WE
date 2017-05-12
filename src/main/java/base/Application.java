@@ -1,4 +1,4 @@
-package main.java.base;
+package base;
 
 
 import org.springframework.boot.SpringApplication;
@@ -11,7 +11,7 @@ public class Application {
 
 	private Application app;
     public static void main(String[] args) {
-        //ApplicationContext ctx = SpringApplication.run(Application.class, args);
+        ApplicationContext ctx = SpringApplication.run(Application.class, args);
     }
 
 }
