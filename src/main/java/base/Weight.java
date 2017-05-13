@@ -1,20 +1,21 @@
 package base;
 
 import java.util.Date;
+import java.io.Serializable;
 
-public class Weight {
+public class Weight implements Serializable{
 	
 	private float currentWeight;
 	private Date date;
 	private Long id;
 	
+	public Weight (){};
 	
 	public Weight(float currentWeight, Date date) {
 		this.currentWeight = currentWeight;
 		this.date = date;
+		
 	}
-	
-	public Weight() {}
 	
 	public float getCurrentWeight() {
 	    return currentWeight;
@@ -27,6 +28,10 @@ public class Weight {
 	  }
 	  public Date getDate() {
 	    return date;
+	  }
+	  
+	  public void setDate(Date date) {
+		    this.date = date;
 	  }
 	  
 	  public Long getId() {
