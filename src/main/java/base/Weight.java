@@ -6,6 +6,7 @@ public class Weight {
 	
 	private float currentWeight;
 	private Date date;
+	private Long id;
 	
 	
 	public Weight(float currentWeight, Date date) {
@@ -24,11 +25,16 @@ public class Weight {
 	    date = new Date();
 	    
 	  }
-	  
 	  public Date getDate() {
 	    return date;
 	  }
 	  
-	 
+	  public Long getId() {
+		    return id;
+	  }
+		  
+	  public void setId(Long id) {
+		    this.id = id;
+	  }
 	  
 }
