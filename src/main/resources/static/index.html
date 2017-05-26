@@ -15,3 +15,36 @@
 
 
 <script>
+var app = angular.module('HomePageApp', []);
+
+function loadWeight ($scope, $http) {
+		//var id = window.location.href.split('id=')[0];
+		//var id = window.location.href.split('id=')[1];
+        var host = window.location.hostname === 'localhost' ?
+	   	'http://localhost:8080' : 
+		'https://wwp-305-project.herokuapp.com'
+	$http({
+		method: 'GET',
+		//url: host + '/weight/' + id
+		url: window.location.href + '/json' 
+	}).then(function(response) {
+		$scope.weight = response.data;
+	});
+}
+app.controller('WeightCtrl', function($scope, $http) {
+		loadWeight($scope, $http);
+});
+
+
+</script>
+</head>
+
+<body>
+	<div ng-controller="WeightCtrl">
+		<div class="weight-div">
+			<h1> Wedding Weight Planner </h1>
+			<img src"../Pictures/homePagePic.png" alt="pic"/>
+			
+		</div>
+</body>
+</html>
