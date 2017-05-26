@@ -22,7 +22,7 @@ function loadWeight ($scope, $http) {
 app.controller('WeightCtrl', function($scope, $http) {
 		$scope.CreateNewWeight = function() {
 			
-			window.location.href = '/newWeight.html'; 
+			window.location.href = '/WeightData.html'; 
 		};
 });
 
@@ -34,7 +34,7 @@ app.controller('WeightCtrl', function($scope, $http) {
 	<div ng-controller="WeightCtrl">
 		<div class="weight-div">
 			<h1> Wedding Weight Planner </h1>
-			<img src"../Pictures/homePagePic.png" alt="pic"/>
+			<img src"homePagePic.png" alt="pic"/>
 			<button ng-click="CreateNewWeight" class="button">Start WWP!</button><br />
 		</div>
 	</div>
