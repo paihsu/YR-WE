@@ -10,15 +10,25 @@ public class Weight implements Serializable{
 	private Date date;
 	// PAi: update
 	private String weddingName;
+	private String userName;
 	
 	
 	public Weight (){};
 	
-	public Weight(String weddingNmae ,float currentWeight, Date date) {
+	public Weight(String weddingNmae ,float currentWeight, Date date, String weddingName, String userNmae) {
 		this.currentWeight = currentWeight;
 		this.date = date;
 		this.weddingName = weddingName;
+		this.userName = userNmae;
 	}
+	
+	public String getUserName() {
+		return userName;
+	}
+	
+	public void setUserName(String userName) {
+	    this.userName = userName;
+	  }
 	
 	public String getWeddingName() {
 		return weddingName;
