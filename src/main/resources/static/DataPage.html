@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="PostApp"> 
+<head>
+<meta charset="UTF-8">
+<title>Welcome App</title>
+
+<script
+        src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<link
+        href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css"
+        rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="table.css" />
+<link rel="stylesheet" type="text/css" href="posts.css" />
+
+<script>
+
+<script>
+var app = angular.module('WelcomeApp',[]);
+app.controller('HomeCtrl', function($scope, %http)) {
+	$scope.createNewWWP = function() {
+		window.location.href = '/newWWP.html'
+	};
+};
+
+</script>
+
+</head>
+<body>
+	
+	<h1 class = brand-heading intro""> Wedding Weight Planner </h1>
+	<div ng-controller="HomeCtrl">
+		<button ng-click="createNewEvent()" class="button button1"> 
+			<font size = "6">
+				Planning!</button>
+			</font>
+	</div>
+
+</body>
+</html>

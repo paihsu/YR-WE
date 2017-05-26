@@ -5,17 +5,28 @@ import java.io.Serializable;
 
 public class Weight implements Serializable{
 	
+	private Long id;
 	private float currentWeight;
 	private Date date;
-	private Long id;
+	// PAi: update
+	private String weddingName;
+	
 	
 	public Weight (){};
 	
-	public Weight(float currentWeight, Date date) {
+	public Weight(String weddingNmae ,float currentWeight, Date date) {
 		this.currentWeight = currentWeight;
 		this.date = date;
-		
+		this.weddingName = weddingName;
 	}
+	
+	public String getWeddingName() {
+		return weddingName;
+	}
+	
+	public void setWeddingName(String weddingName) {
+	    this.weddingName = weddingName;
+	  }
 	
 	public float getCurrentWeight() {
 	    return currentWeight;

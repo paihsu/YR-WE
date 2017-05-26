@@ -20,7 +20,7 @@ public class WeightController {
 	@GetMapping
     public ArrayList<Weight> listAll() {
         ArrayList<Weight> weights = new ArrayList<>();
-       // weightRepository.findAll().forEach(weight -> (weights.add(weight)));
+        //weightRepository.findAll().forEach(weight -> (weights.add(weight)));
         return weights;
     }
 
@@ -31,7 +31,7 @@ public class WeightController {
 
 	@PostMapping
 	public Weight create(@RequestBody Weight input) {
-	    return weightRepository.save(new Weight(input.getCurrentWeight(), input.getDate()));
+	    return weightRepository.save(new Weight( input.getWeddingName() ,input.getCurrentWeight(), input.getDate()));
 	}
 
 	@DeleteMapping("{id}")
@@ -48,6 +48,7 @@ public class WeightController {
             weight.setCurrentWeight(input.getCurrentWeight());
             weight.setDate(input.getDate());
             weight.setId(input.getId());
+            
             return weightRepository.save(weight);
         }
     }
