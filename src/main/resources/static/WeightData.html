@@ -1,9 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="WeightDataApp">
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Weight Data App</title>
+
+<script
+        src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<link
+        href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css"
+        rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="table.css" />
+<link rel="stylesheet" type="text/css" href="posts.css" />
+<link rel="shortcut icon" href="Pictures/favicon.ico" type="image/x-icon" />
+
+<script>
+
+var app = angular.module('WeightDataApp',[]);
+
+app.controller('WeightDataCtrl', function($scope, $http) {
+	// local, heroku
+	var host = window.location.hostnmae =='localhost'?
+			'http://localhost:8080 ' :
+			'https://wwp-305-project.herokuapp.com'
+	var url = window.location.href.split('id=');
+	// scope weight , set id
+	$scope.weight = {};
+	$scope.id = url[1];
+	$http({
+		method: 'GET',
+	    url: host + '/weight/' + $scope.id
+	}).then(function(response) {
+		$scope.weight = response.data;		
+	});
+}
+// create New Weight: input data 
+
+$scope.createWeightInput = function() {
+	var postRequest = {
+			method: 'POST',
+			url: host + '/weight',
+			data: {
+				
+			}
+	}
+}
+
+</script>
 </head>
+
 <body>
 
 </body>
