@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="HomePageApp">
 <head>
-<title>Home Page App</title>
+<title>HomePageApp</title>
 <meta charset="utf-8">
 
 <script
@@ -18,21 +18,12 @@
 var app = angular.module('HomePageApp', []);
 
 function loadWeight ($scope, $http) {
-		//var id = window.location.href.split('id=')[0];
-		//var id = window.location.href.split('id=')[1];
-        var host = window.location.hostname === 'localhost' ?
-	   	'http://localhost:8080' : 
-		'https://wwp-305-project.herokuapp.com'
-	$http({
-		method: 'GET',
-		//url: host + '/weight/' + id
-		url: window.location.href + '/json' 
-	}).then(function(response) {
-		$scope.weight = response.data;
-	});
-}
+	
 app.controller('WeightCtrl', function($scope, $http) {
-		loadWeight($scope, $http);
+		$scope.CreateNewWeight = function() {
+			
+			window.location.href = '/newWeight.html';
+		};
 });
 
 
@@ -44,7 +35,8 @@ app.controller('WeightCtrl', function($scope, $http) {
 		<div class="weight-div">
 			<h1> Wedding Weight Planner </h1>
 			<img src"../Pictures/homePagePic.png" alt="pic"/>
-			
+			<button ng-click="CreateNewWeight" class="button">Start WWP!</button><br />
 		</div>
+	</div>
 </body>
 </html>
