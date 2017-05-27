@@ -9,8 +9,7 @@
 <link
         href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css"
         rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="table.css" />
-<link rel="stylesheet" type="text/css" href="posts.css" />
+
 <link rel="shortcut icon" href="Pictures/favicon.ico" type="image/x-icon" />
 
 <script>
@@ -32,7 +31,7 @@ app.controller('WeightDataCtrl', function($scope, $http) {
 	}).then(function(response) {
 		$scope.weight = response.data;		
 	});
-}
+
 // create New Weight: input data 
 
 $scope.createWeightData = function() {
@@ -55,7 +54,7 @@ $scope.createWeightData = function() {
 	$http(postRequest).then(function(response) {
 		window.location.href = '/WeightResult.html';
 	});
-};
+});
 
 </script>
 </head>
@@ -64,7 +63,7 @@ $scope.createWeightData = function() {
 	<div ng-controller="WeightDataCtrl" align = "center">
     <center>
     <br></br> 
-	<font size = "16">Please input some information</font> 
+	<font size = "16">Please input Your information</font> 
 	<br></br> 
     Who's Wedding:	<input ng-model="weight.weddingName"/> </p>
 	Your Name:	<input ng-model="weight.userName"/> </p>
@@ -72,7 +71,7 @@ $scope.createWeightData = function() {
 	Your Final Goal:	<input ng-model="weight.finalWeight"/> </p>
 	The Wedding Date:	<input ng-model="weight.finalDate"/> </p>
 	<br></br> 
-	<button ng-click="createWeightData()" class="button"> <font size = "6">Submit</button></font> 
+	<button ng-click="createWeightData()" class="button"> <font size = "5">Submit</button></font> 
 	
 	</center>
 	</div>
