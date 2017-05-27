@@ -17,7 +17,6 @@ public class CaloriAllowance {
 	    // Get msec from each, and subtract.
 	    long diff = today.getTime() - d1.getTime();
 	    long daysLast = diff / (1000 * 60 * 60 * 24);
-	    
-	    // 
+
 	  
 }
