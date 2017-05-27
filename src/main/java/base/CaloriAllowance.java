@@ -6,7 +6,7 @@ import java.util.GregorianCalendar;
 import base.Weight;
 
 public class CaloriAllowance {
-	public static void main(String[] av) {
+	
 	    /** The date at the end of the last century */
 		Weight weight = new Weight();
 	    Date d1 = weight.getfinalDate();
@@ -19,5 +19,5 @@ public class CaloriAllowance {
 	    long daysLast = diff / (1000 * 60 * 60 * 24);
 	    
 	    // 
-	  }
+	  
 }
