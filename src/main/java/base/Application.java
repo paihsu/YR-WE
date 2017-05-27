@@ -16,7 +16,7 @@ public class Application {
     
     @Bean
     public WeightRepository weightRepository() {
-		return new DataBaseWeightRepository();
+		return new WeightRepositoryMemory();
     }
    
     
