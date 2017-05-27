@@ -4,6 +4,7 @@ package base;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -31,7 +32,8 @@ public class WeightController {
 
 	@PostMapping
 	public Weight create(@RequestBody Weight input) {
-	    return weightRepository.save(new Weight( input.getWeddingName() ,input.getCurrentWeight(), input.getDate()));
+		//String weddingName, String userNmae ,float currentWeight, float finalWeight, Date finalDate
+	    return weightRepository.save(new Weight( input.getWeddingName() , input.getUserName(),input.getCurrentWeight(), input.getFinalWeight(), input.getfinalDate()));
 	}
 
 	@DeleteMapping("{id}")
@@ -45,10 +47,11 @@ public class WeightController {
         if (weight == null) {
             return null;
         } else {
+        	/* work for daily update...
             weight.setCurrentWeight(input.getCurrentWeight());
             weight.setDate(input.getDate());
             weight.setId(input.getId());
-            
+            */
             return weightRepository.save(weight);
         }
     }

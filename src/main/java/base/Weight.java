@@ -47,6 +47,15 @@ public class Weight implements Serializable{
 	  public void setCurrentWeight(float currentWeight) {  
 	    this.currentWeight = currentWeight;
 	  }
+	  
+	  public float getFinalWeight() {
+		    return finalWeight;
+		  }
+		  
+		  public void setFinalWeight(float finalWeight) {  
+		    this.finalWeight = finalWeight;
+		  }
+	  
 	  public Date getfinalDate() {
 	    return finalDate;
 	  }
