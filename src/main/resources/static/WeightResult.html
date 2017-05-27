@@ -20,12 +20,60 @@ li {
 </style>
 
 <script>
+var app = angular.module('WeightResultApp', []);
 
+function loadWeight ($scope, $http) {
+	
+	$http({
+		method : 'GET',
+		url: (window.location.hostname === 'localhost' ? 
+				'http://localhost:8080/post' : 
+				'https://wwp-305-project.herokuapp.com/post')
+		        }).then(function (response) {
+		                $scope.posts = response.data;
+	});
+}
+app.controller('WeightResultCtrl', function ($scope, $http) {
+	loadWeight($scope, $http);
+	// Pai
+	var getRequest = {
+		method: 'GET',
+		url: (window.location.hostname === 'localhost' ? 
+        	        'http://localhost:8080/weight' : 
+       	        	'https://wwp-305-project.herokuapp.com/weight')
+	}
+	$http(getRequest).then(function(response) {
+		$scope.weight = response.data;
+	}
+	
+	$scope.viewCalendar = function() {
+		window.location.href = '/ResultCalendar.html';
+	}
+});
+
+// 1. link to google calender
+// 2. do the calculating for: 1.days, 2. caloriAllowance
 
 </script>
 
 </head>
 <body>
+	<div ng-controller="WeightResultCtrl">
+   	<center>
+   	<p> </p>
+	<h2>Welcome {{weight.userName}}!</h2>  
+	<h3>This is Your {{weight.weddingName}} Wedding Weight Plan</h3> 
+	<br></br> 
+       <h4>Your Result is:</h4>
+      	Your Current Weight: {{weight.currentWeight}} </br>
+      	Your Goal Weight: {{weight.finalWeight}} </br>
+      	The Wedding date is: {{weight.finalDate}} </br>
+      	Daily Calori Allowance: </br>
+      	How Many Day Last: </br>
+      	<br></br> 
+      	<button ng-click="viewCalendar()" class="button">View Calendar</button><br />
+	</center>     
+	</div>
 
 </body>
 </html>

@@ -17,28 +17,14 @@
 var app = angular.module('WeightDataApp',[]);
 
 app.controller('WeightDataCtrl', function($scope, $http) {
-	// local, heroku
-	var host = window.location.hostnmae =='localhost'?
-			'http://localhost:8080 ' :
-			'https://wwp-305-project.herokuapp.com'
-	var url = window.location.href.split('id=');
-	// scope weight , set id
-	$scope.weight = {};
-	$scope.id = url[1];
-	$http({
-		method: 'GET',
-	    url: host + '/weight/' + $scope.id
-	}).then(function(response) {
-		$scope.weight = response.data;		
-	});
-
-// create New Weight: input data 
-
-$scope.createWeightData = function() {
-	// Weight(String weddingName, String userNmae ,float currentWeight, float finalWeight, Date finalDate)
-	var postRequest = {
-			method: 'POST',
-			url: host + '/weight',
+	
+	
+	$scope.save = function(weight) {
+  		var postRequest = {
+  			method: 'POST',
+  			url:(window.location.hostname === 'localhost' ? 
+				'http://localhost:8080/weight' : 
+				'https://wwp-305-project.herokuapp.com/weight'),
 			data: {
 				weddingName: $scope.weight.weddingName,
 				userName: $scope.weight.userName,
@@ -46,15 +32,15 @@ $scope.createWeightData = function() {
 				finalWeight: $scope.weight.finalWeight,
 				finalDate: $scope.weight.finalDate
 			}
-	}
-	if($scope.id !== null) {
-		postRequest.data.id = $scope.id;
-	}
-	// go to next page: WeightResult.html
-	$http(postRequest).then(function(response) {
-		window.location.href = '/WeightResult.html';
-	});
-});
+  		}
+  		$http(postRequest).then(function (response) {
+  			$scope.weight = response.data;
+			window.location.href = '/WeightResult.html';
+		
+		});
+  	};
+	
+}); //end 
 
 </script>
 </head>
@@ -71,7 +57,7 @@ $scope.createWeightData = function() {
 	Your Final Goal:	<input ng-model="weight.finalWeight"/> </p>
 	The Wedding Date:	<input ng-model="weight.finalDate"/> </p>
 	<br></br> 
-	<button ng-click="createWeightData()" class="button"> <font size = "5">Submit</button></font> 
+	<button ng-click="save(weight)" class="button"> <font size = "5">Submit</button></font> 
 	
 	</center>
 	</div>

@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
+
 import base.Weight;
 
 public class WeightRepositoryMemory implements WeightRepository{
@@ -40,9 +41,11 @@ public class WeightRepositoryMemory implements WeightRepository{
 	}
 
 	@Override
-	public List<Weight> save(List<Weight> weight) {
+	public List<Weight> save(List<Weight> weights) {
 		// TODO Auto-generated method stub
-		return null;
+		for(Weight w:weights)
+			save(w);
+		return weights;
 	}
 
 }
