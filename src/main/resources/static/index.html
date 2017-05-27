@@ -17,14 +17,14 @@
 <script>
 var app = angular.module('HomePageApp', []);
 
-function loadWeight ($scope, $http) {
+//function loadWeight ($scope, $http) {
 	
 app.controller('WeightCtrl', function($scope, $http) {
 		$scope.CreateNewWeight = function() {
 			
 			window.location.href = '/WeightData.html'; 
 		};
-};
+});
 
 
 </script>
@@ -33,11 +33,13 @@ app.controller('WeightCtrl', function($scope, $http) {
 <body>
 	<div ng-controller="WeightCtrl">
 		<div class="weight-div">
+		<center>
 			<h1> Wedding Weight Planner </h1>
 			<img src"../Pictures/homePagePic.png" alt="homePagePic" style="width:304px;height:228px;"/>
 			<br />
 			<br />
 			<button ng-click="CreateNewWeight()" class="button">Start WWP!</button><br />
+		</center>
 		</div>
 	</div>
 </body>
