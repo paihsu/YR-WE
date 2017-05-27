@@ -27,11 +27,11 @@ function loadWeight ($scope, $http) {
 	$http({
 		method : 'GET',
 		url: (window.location.hostname === 'localhost' ? 
-				'http://localhost:8080/post' : 
-				'https://wwp-305-project.herokuapp.com/post')
+				'http://localhost:8080' : 
+				'https://wwp-305-project.herokuapp.com')
 		        }).then(function (response) {
 		                $scope.posts = response.data;
-	});
+	};
 }
 app.controller('WeightResultCtrl', function ($scope, $http) {
 	loadWeight($scope, $http);
@@ -44,10 +44,10 @@ app.controller('WeightResultCtrl', function ($scope, $http) {
 	}
 	$http(getRequest).then(function(response) {
 		$scope.weight = response.data;
-	}
+	});
 	
 	$scope.viewCalendar = function() {
-		window.location.href = '/ResultCalendar.html';
+		window.location.href = '/google-calendar-event-insert-js.jsp';
 	}
 });
 
