@@ -18,5 +18,6 @@ public class CaloriAllowance {
 	    long diff = today.getTime() - d1.getTime();
 	    long daysLast = diff / (1000 * 60 * 60 * 24);
 
-	  
+	    // make the calori pre day here
+	    
 }
