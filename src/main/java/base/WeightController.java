@@ -33,7 +33,8 @@ public class WeightController {
 	@PostMapping
 	public Weight create(@RequestBody Weight input) {
 		//String weddingName, String userNmae ,float currentWeight, float finalWeight, Date finalDate
-	    return weightRepository.save(new Weight( input.getWeddingName() , input.getUserName(),input.getCurrentWeight(), input.getFinalWeight(), input.getfinalDate()));
+	    return weightRepository.save(new Weight( input.getWeddingName() , input.getUserName(),input.getCurrentWeight(), 
+	    								input.getFinalWeight(), input.getfinalDate()));
 	}
 
 	@DeleteMapping("{id}")
