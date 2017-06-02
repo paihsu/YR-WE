@@ -6,17 +6,15 @@ import java.io.Serializable;
 public class Weight implements Serializable{
 	
 	private Long id;
-	// PAi: update
-	private float finalWeight;
-	private Date finalDate;
+	private String finalWeight;
+	private String finalDate;
 	private String weddingName;
 	private String userName;
-	private float currentWeight;
-	
+	private String currentWeight;
 	
 	public Weight (){};
 	
-	public Weight(String weddingName, String userNmae ,float currentWeight, float finalWeight, Date finalDate) {
+	public Weight(String weddingName, String userNmae ,String currentWeight, String finalWeight, String finalDate) {
 		this.currentWeight = currentWeight;
 		this.finalWeight = finalWeight;
 		this.finalDate = finalDate;
@@ -40,27 +38,27 @@ public class Weight implements Serializable{
 	    this.weddingName = weddingName;
 	  }
 	
-	public float getCurrentWeight() {
+	public String getCurrentWeight() {
 	    return currentWeight;
 	  }
 	  
-	  public void setCurrentWeight(float currentWeight) {  
+	  public void setCurrentWeight(String currentWeight) {  
 	    this.currentWeight = currentWeight;
 	  }
 	  
-	  public float getFinalWeight() {
+	  public String getFinalWeight() {
 		    return finalWeight;
 		  }
 		  
-		  public void setFinalWeight(float finalWeight) {  
+		  public void setFinalWeight(String finalWeight) {  
 		    this.finalWeight = finalWeight;
 		  }
 	  
-	  public Date getfinalDate() {
+	  public String getfinalDate() {
 	    return finalDate;
 	  }
 	  
-	  public void setfinalDate(Date finalDate) {
+	  public void setfinalDate(String finalDate) {
 		    this.finalDate = finalDate;
 	  }
 	  
