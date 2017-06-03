@@ -4,3 +4,5 @@ Heroku app url: https://wwp-305-project.herokuapp.com
 
 Wedding Weight Planner, (WWP) 
 
+<img src="" />
+
