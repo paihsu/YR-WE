@@ -14,6 +14,7 @@ Personal: Set your goals and achieve them on your terms
 
 The Class Diagram:
 
+<img src="https://github.com/cpe305Spring17/spring2017-project-paihsu/blob/master/WWP_classDiagram.png" />
 
 The weight input page:
 
