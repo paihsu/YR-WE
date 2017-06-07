@@ -50,6 +50,7 @@ app.controller('WeightResultCtrl', function ($scope, $http) {
 		window.location.href = '/google-calendar-event-insert-js.jsp';
 	}
 	*/
+	//var id = window.location.href.split('id=')[1];
 	var id = window.location.href.split('id=')[1];
     var host = window.location.hostname === 'localhost' ?
    'http://localhost:8080' : 'https://wwp-305-project.herokuapp.com'
@@ -57,12 +58,16 @@ app.controller('WeightResultCtrl', function ($scope, $http) {
 			method: 'GET',
 			url: host + '/weight/' + id
 		}).then(function(response) {
-			$scope.event = response.data;
+			$scope.weight = response.data;
 		});
 	}
 	app.controller('WeightResultCtrl', function($scope, $http, $location) {
-		loadEvent($scope, $http);
+		loadWeight($scope, $http);
 		$scope.id = $location.search().id;
+		
+		$scope.viewCalendar = function() {
+			window.location.href = '/quickstart.html';
+		}
 	
 });
 
