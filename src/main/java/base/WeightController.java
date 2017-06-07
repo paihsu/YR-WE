@@ -6,11 +6,12 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+//import Weight.WeightRepository;
 
 @RestController
 @CrossOrigin
 @RequestMapping("/weight")
-public class WeightController {
+public class WeightController implements ApiController<Weight> {
 
 	private final WeightRepository weightRepository;
 	

@@ -22,10 +22,9 @@ app.controller('WeightDataCtrl', function($scope, $http) {
 	$scope.weight = {};
 	
 	
-	var url = window.location.href.split('id=');
 	var host = window.location.hostname === 'localhost' ?
 			'http://localhost:8080' : 'https://wwp-305-project.herokuapp.com'
-	
+				var url = window.location.href.split('id=');
 				if (url.length > 1) {
 				      $scope.id = url[1];
 				      $http({
@@ -36,7 +35,7 @@ app.controller('WeightDataCtrl', function($scope, $http) {
 				      });
 				   }
 	
-	$scope.save = function(weight) {
+	$scope.save = function() {
   		var postRequest = {
   			method: 'POST',
   			url: host + '/weight',
@@ -45,18 +44,17 @@ app.controller('WeightDataCtrl', function($scope, $http) {
 				userName: $scope.weight.userName,
 				currentWeight: $scope.weight.currentWeight,
 				finalWeight: $scope.weight.finalWeight,
-				finalDate: $scope.weight.finalDate
+				finalDate: $scope.weight.finalDate,
 			}
   		}
   		if ($scope.id !== null) {
             postRequest.data.id = $scope.id;
          }
   		$http(postRequest).then(function (response) {
-  			window.location.href = '/add_decorations.html#?id=' + response.data.id;
+  			window.location.href = '/WeightResult.html#?id=' + response.data.id;
 		
 		});
   	};
-	
 }); //end 
 
 </script>
@@ -74,8 +72,7 @@ app.controller('WeightDataCtrl', function($scope, $http) {
 	Your Final Goal:	<input ng-model="weight.finalWeight"/> </p>
 	The Wedding Date:	<input ng-model="weight.finalDate"/> </p>
 	<br></br> 
-	<button ng-click="save(weight)" class="button"> <font size = "5">Submit</button></font> 
-	
+	<button ng-click="save()" class="button"> <font size = "5">Submit</button></font> 
 	</center>
 	</div>
 </body>

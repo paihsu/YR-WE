@@ -23,7 +23,7 @@ li {
 var app = angular.module('WeightResultApp', []);
 
 function loadWeight ($scope, $http) {
-	
+	/*
 	$http({
 		method : 'GET',
 		url: (window.location.hostname === 'localhost' ? 
@@ -49,6 +49,21 @@ app.controller('WeightResultCtrl', function ($scope, $http) {
 	$scope.viewCalendar = function() {
 		window.location.href = '/google-calendar-event-insert-js.jsp';
 	}
+	*/
+	var id = window.location.href.split('id=')[1];
+    var host = window.location.hostname === 'localhost' ?
+   'http://localhost:8080' : 'https://wwp-305-project.herokuapp.com'
+	$http({
+			method: 'GET',
+			url: host + '/weight/' + id
+		}).then(function(response) {
+			$scope.event = response.data;
+		});
+	}
+	app.controller('WeightResultCtrl', function($scope, $http, $location) {
+		loadEvent($scope, $http);
+		$scope.id = $location.search().id;
+	
 });
 
 // 1. link to google calender
