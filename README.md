@@ -36,11 +36,11 @@ Extremely active (intense exercise or sports training six to seven days per week
 ---------------------------
 The Class Diagram:
 
-<img src="https://github.com/cpe305Spring17/spring2017-project-paihsu/blob/master/WWP_classDiagram.png" />
+<img src="https://raw.githubusercontent.com/cpe305Spring17/spring2017-project-paihsu/master/WWP_classDiagram.png" />
 
 Architecture:
 
-<img src="https://github.com/cpe305Spring17/spring2017-project-paihsu/blob/master/googleAPIDiagram.png" />
+<img src="https://raw.githubusercontent.com/cpe305Spring17/spring2017-project-paihsu/blob/master/googleAPIDiagram.png" />
 
 ---------------------------
 Patterns:
