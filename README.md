@@ -42,6 +42,7 @@ Architecture:
 
 <img src="https://github.com/cpe305Spring17/spring2017-project-paihsu/blob/master/googleAPIDiagram.png" />
 
+---------------------------
 Patterns:
 Singleton: The object can only be instantiated one time. Repeated calls to its constructor return the same instance.
 Mediator: It useful in the development of complex forms. It provides central authority over a group of objects by encapsulating how these objects interact.
