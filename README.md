@@ -51,7 +51,7 @@ Mediator: It useful in the development of complex forms. It provides central aut
 ---------------------------
 WWP start page:
 
-<img src="https://github.com/cpe305Spring17/spring2017-project-paihsu/blob/master/wwp01.png" />
+<img src="https://github.com/cpe305Spring17/spring2017-project-paihsu/blob/master/wwp01.PNG" />
 
 The weight input page:
 
