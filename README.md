@@ -40,7 +40,7 @@ The Class Diagram:
 
 Architecture:
 
-<img src="https://raw.githubusercontent.com/cpe305Spring17/spring2017-project-paihsu/blob/master/googleAPIDiagram.png" />
+<img src="https://raw.githubusercontent.com/cpe305Spring17/spring2017-project-paihsu/master/googleAPIDiagram.png" />
 
 ---------------------------
 Patterns:
@@ -51,7 +51,7 @@ Mediator: It useful in the development of complex forms. It provides central aut
 ---------------------------
 WWP start page:
 
-<img src="https://github.com/cpe305Spring17/spring2017-project-paihsu/blob/master/wwp01.png" />
+<img src="https://raw.githubusercontent.com/cpe305Spring17/spring2017-project-paihsu/master/wwp01.png" />
 
 The weight input page:
 
