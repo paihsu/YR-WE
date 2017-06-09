@@ -1,18 +1,20 @@
 package base;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-//import Weight.WeightRepository;
+
+import base.WeightRepository;
+
+import base.Weight;
 
 @RestController
 @CrossOrigin
 @RequestMapping("/weight")
 public class WeightController implements ApiController<Weight> {
-
+	
 	private final WeightRepository weightRepository;
 	
 	public WeightController(WeightRepository weightRepository) {
@@ -22,7 +24,7 @@ public class WeightController implements ApiController<Weight> {
 	@GetMapping
     public ArrayList<Weight> listAll() {
         ArrayList<Weight> weights = new ArrayList<>();
-        //weightRepository.findAll().forEach(weight -> (weights.add(weight)));
+       // weightRepository.findAll().forEach(weight -> (weights.add(weight)));
         return weights;
     }
 
@@ -34,8 +36,8 @@ public class WeightController implements ApiController<Weight> {
 	@PostMapping
 	public Weight create(@RequestBody Weight input) {
 		//String weddingName, String userNmae ,float currentWeight, float finalWeight, Date finalDate
-	    return weightRepository.save(new Weight( input.getWeddingName() , input.getUserName(),input.getCurrentWeight(), 
-	    								input.getFinalWeight(), input.getfinalDate()));
+	    return weightRepository.save(new Weight( input.getWeddingName() , input.getUserName(), input.getAge(), input.getCurrentWeight(), 
+	    								input.getFinalWeight(),  input.getHeight(),input.getfinalDate()));
 	}
 
 	@DeleteMapping("{id}")
