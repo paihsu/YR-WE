@@ -34,10 +34,27 @@ The Class Diagram:
 
 <img src="https://github.com/cpe305Spring17/spring2017-project-paihsu/blob/master/WWP_classDiagram.png" />
 
+WWP start page:
+
+<img src="https://github.com/cpe305Spring17/spring2017-project-paihsu/blob/master/wwp01.png" />
+
 The weight input page:
 
-<img src="https://github.com/cpe305Spring17/spring2017-project-paihsu/blob/master/Weight_Input.png" />
+<img src="https://github.com/cpe305Spring17/spring2017-project-paihsu/blob/master/wwp02.png" />
 
 The weight Result page:
 
+<img src="https://github.com/cpe305Spring17/spring2017-project-paihsu/blob/master/wwp03.png" />
+
+The WWP Calendar
+
+<img src="https://github.com/cpe305Spring17/spring2017-project-paihsu/blob/master/wwp04.png" />
+
+LogIn to link your Google Calendar and update with it
+
+<img src="https://github.com/cpe305Spring17/spring2017-project-paihsu/blob/master/wwp05.png" />
+
+The update result
+
+<img src="https://github.com/cpe305Spring17/spring2017-project-paihsu/blob/master/wwp07.png" />
 
