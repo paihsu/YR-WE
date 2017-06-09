@@ -55,7 +55,7 @@ WWP start page:
 
 The weight input page:
 
-<img src="https://github.com/cpe305Spring17/spring2017-project-paihsu/blob/master/wwp02.png" />
+<img src="https://raw.githubusercontent.com/cpe305Spring17/spring2017-project-paihsu/master/wwp02.png" />
 
 The weight Result page:
 
