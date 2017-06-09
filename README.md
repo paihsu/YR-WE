@@ -16,7 +16,19 @@ The Formula for Losing Weight:  Harris Benedict gives a pretty good idea of how 
 
 But eating less isn't the only way to slim down. To lose 500 calories a day, you also can cut calories by 250 and add a workout that burns 250 calories.
 
-The formula: 655 + (4.35 x weight in pounds ) + (4.7 x height in inches ) - (4.7 x age).
+The Formula of calculate BMR : 655 + (4.35 x weight in pounds ) + (4.7 x height in inches ) - (4.7 x age).
+
+In the funture, this app will add active chosing:
+
+Sedentary: BMR x 1.2.
+
+Lightly active (light exercise one to three days a week): BMR x 1.375.
+
+Moderately active (moderate exercise three to five days per week): BMR x 1.55.
+
+Very active (vigorous exercise six to seven days a week): BMR x 1.725.
+
+Extremely active (intense exercise or sports training six to seven days per week): BMR x 1.9.
 
 The Class Diagram:
 
