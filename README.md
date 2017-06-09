@@ -59,22 +59,22 @@ The weight input page:
 
 The weight Result page:
 
-<img src="https://github.com/cpe305Spring17/spring2017-project-paihsu/blob/master/wwp03.png" />
+<img src="https://raw.githubusercontent.com/cpe305Spring17/spring2017-project-paihsu/master/wwp03.png" />
 
 The WWP Calendar
 
-<img src="https://github.com/cpe305Spring17/spring2017-project-paihsu/blob/master/wwp04.png" />
+<img src="https://raw.githubusercontent.com/cpe305Spring17/spring2017-project-paihsu/master/wwp04.png" />
 
 LogIn to link your Google Calendar and update with it
 
-<img src="https://github.com/cpe305Spring17/spring2017-project-paihsu/blob/master/wwp05.png" />
+<img src="https://raw.githubusercontent.com/cpe305Spring17/spring2017-project-paihsu/master/wwp05.png" />
 
 The update result
 
-<img src="https://github.com/cpe305Spring17/spring2017-project-paihsu/blob/master/wwp07.png" />
+<img src="https://raw.githubusercontent.com/cpe305Spring17/spring2017-project-paihsu/master/wwp07.png" />
 
 ---------------------------
 The best about the design and implementation of this individual project:  work on google API
 
-<img src="https://github.com/cpe305Spring17/spring2017-project-paihsu/blob/master/moregoogleapi.png" />
+<img src="https://raw.githubusercontent.com/cpe305Spring17/spring2017-project-paihsu/master/moregoogleapi.png" />
 
