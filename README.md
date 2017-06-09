@@ -74,7 +74,7 @@ The update result
 <img src="https://raw.githubusercontent.com/cpe305Spring17/spring2017-project-paihsu/master/wwp07.png" />
 
 ---------------------------
-The best about the design and implementation of this individual project:  work on google API
+The Key learn & The best about the design and implementation of this individual project:  work on google API
 
 <img src="https://raw.githubusercontent.com/cpe305Spring17/spring2017-project-paihsu/master/moregoogleapi.png" />
 
