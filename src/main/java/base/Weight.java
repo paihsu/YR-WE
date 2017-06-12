@@ -13,10 +13,13 @@ public class Weight implements Serializable{
 	private String currentWeight;
 	private String height;
 	private String age;
+	//
+	private float calori;
 	
 	public Weight (){};
 	
-	public Weight(String weddingName, String userNmae , String age,String currentWeight, String finalWeight, String height, String finalDate) {
+	public Weight(String weddingName, String userNmae , String age,String currentWeight, String finalWeight, String height, String finalDate
+			, float calori) {
 		this.currentWeight = currentWeight;
 		this.finalWeight = finalWeight;
 		this.finalDate = finalDate;
@@ -24,6 +27,8 @@ public class Weight implements Serializable{
 		this.userName = userNmae;
 		this.height = height;
 		this.age = age;
+		//
+		this.calori = calori;
 	}
 	
 	public String getAge() {
@@ -89,5 +94,14 @@ public class Weight implements Serializable{
 	  public void setId(Long id) {
 		    this.id = id;
 	  }
+	  public float getCalori() {
+			CaloriAllowance cAllow = new CaloriAllowance();
+			calori = cAllow.calculate(currentWeight, height, age);
+			return calori;
+	  }
+	  public void setCalori(float calori, String currentWeight, String height, String age) {	
+			this.calori = calori;
+	  }
+		
 	  
 }

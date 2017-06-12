@@ -22,7 +22,8 @@
 
       // Authorization scopes required by the API; multiple scopes can be
       // included, separated by spaces.
-      var SCOPES = "https://www.googleapis.com/auth/calendar.readonly";
+      //var SCOPES = "https://www.googleapis.com/auth/calendar.readonly";
+      var SCOPES = "https://www.googleapis.com/auth/calendar";
 
       var authorizeButton = document.getElementById('authorize-button');
       var signoutButton = document.getElementById('signout-button');
@@ -106,7 +107,7 @@
           'timeMin': (new Date()).toISOString(),
           'showDeleted': false,
           'singleEvents': true,
-          'maxResults': 10,
+          'maxResults': 5,
           'orderBy': 'startTime'
         }).then(function(response) {
           var events = response.result.items;
@@ -122,52 +123,27 @@
               appendPre(event.summary + ' (' + when + ')')
             }
           } else {
-            appendPre('No upcoming events found.');
+            appendPre('No upcoming updaye weight can be found.');
           }
         });
       }
-      
-      // add weight
-     // date variables
-			var now = new Date();
-			today = now.toISOString();
-			
-			var twoHoursLater = new Date(now.getTime() + (2*1000*60*60));
-			twoHoursLater = twoHoursLater.toISOString();
-
-			// setup event details
-			var resource = {
-				"summary": "Sample Event " + Math.floor((Math.random() * 10) + 1),
-				"start": {
-					"dateTime": today
-				},
-				"end": {
-					"dateTime": twoHoursLater
-				}
-			};
-  
-			// function load the calendar api and make the api call
-			function makeApiCall() {
-				gapi.client.load('calendar', 'v3', function() {					// load the calendar api (version 3)
-					var request = gapi.client.calendar.events.insert({
-						'calendarId':		'm3e6p19okr0epsseqk5sbqjahc%40group.calendar.google.com',	// calendar ID
-						"resource":			resource							// pass event details with api call
-					});
-				});
-			}
-      // end add weight
+   
       
     </script>
+ 
     <script async defer src="https://apis.google.com/js/api.js"
       onload="this.onload=function(){};handleClientLoad()"
       onreadystatechange="if (this.readyState === 'complete') this.onload()">
     </script>
     
-    <!-- my calendar -->
+ <!--  my calendar 
  	<button id="btnCreateEvents" class="btn btn-primary" onclick="makeApiCall();">
-                    Add Daily Weight </button>
+                    Add Daily Weight </button>  -->
+                  
     <div id="divifm">
-                    <iframe src="https://calendar.google.com/calendar/embed?src=m3e6p19okr0epsseqk5sbqjahc%40group.calendar.google.com&ctz=America/Los_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+                    <iframe src="https://calendar.google.com/calendar/embed?src=m3e6p19okr0epsseqk5sbqjahc%40group.calendar.google.com&
+                    ctz=America/Los_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no">
+                    </iframe>
                 </div>
     
     

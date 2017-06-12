@@ -21,9 +21,9 @@ app.controller('WeightDataCtrl', function($scope, $http) {
 	// Pai: 6/2/17
 	$scope.weight = {};
 	
-	
 	var host = window.location.hostname === 'localhost' ?
-			'http://localhost:8080' : 'https://wwp-305-project.herokuapp.com'
+				'http://localhost:8080' : 
+				'https://wwp-305-project.herokuapp.com'
 				var url = window.location.href.split('id=');
 				if (url.length > 1) {
 				      $scope.id = url[1];
@@ -46,7 +46,7 @@ app.controller('WeightDataCtrl', function($scope, $http) {
 				currentWeight: $scope.weight.currentWeight,
 				finalWeight: $scope.weight.finalWeight,
 				height: $scope.weight.height,
-				finalDate: $scope.weight.finalDate
+				finalDate: $scope.weight.finalDate,
 			}
   		}
   		if ($scope.id !== null) {
@@ -54,7 +54,6 @@ app.controller('WeightDataCtrl', function($scope, $http) {
          }
   		$http(postRequest).then(function (response) {
   			window.location.href = '/WeightResult.html#?id=' + response.data.id;
-		
 		});
   	};
 }); //end 

@@ -14,7 +14,7 @@
 
 <style>
 li {
-	background-color: rgb(153,102,153);
+	background-color: rgb(200,102,153);
   	color: rgb(255,255,204);
 }
 </style>
@@ -23,34 +23,7 @@ li {
 var app = angular.module('WeightResultApp', []);
 
 function loadWeight ($scope, $http) {
-	/*
-	$http({
-		method : 'GET',
-		url: (window.location.hostname === 'localhost' ? 
-				'http://localhost:8080' : 
-				'https://wwp-305-project.herokuapp.com')
-		        }).then(function (response) {
-		                $scope.posts = response.data;
-	};
-}
-app.controller('WeightResultCtrl', function ($scope, $http) {
-	loadWeight($scope, $http);
-	// Pai
-	var getRequest = {
-		method: 'GET',
-		url: (window.location.hostname === 'localhost' ? 
-        	        'http://localhost:8080/weight' : 
-       	        	'https://wwp-305-project.herokuapp.com/weight')
-	}
-	$http(getRequest).then(function(response) {
-		$scope.weight = response.data;
-	});
 	
-	$scope.viewCalendar = function() {
-		window.location.href = '/google-calendar-event-insert-js.jsp';
-	}
-	*/
-	//var id = window.location.href.split('id=')[1];
 	var id = window.location.href.split('id=')[1];
     var host = window.location.hostname === 'localhost' ?
    'http://localhost:8080' : 'https://wwp-305-project.herokuapp.com'
@@ -66,15 +39,16 @@ app.controller('WeightResultCtrl', function ($scope, $http) {
 		$scope.id = $location.search().id;
 		
 		$scope.viewCalendar = function() {
-			window.location.href = '/quickstart.html';
+			//window.location.href = '/quickstart.html';
+			//window.location.href = '/google-calendar-even-insert-js.html';
+			window.location.href = '/googleCalendarApi.html';
 		}
-	
+			
 });
-
-// 1. link to google calender
-// 2. do the calculating for: 1.days, 2. caloriAllowance
-
 </script>
+ <script type="text/javascript">
+ //document.calculatex.result.value = 111;
+ </script>
 
 </head>
 <body>
@@ -88,12 +62,13 @@ app.controller('WeightResultCtrl', function ($scope, $http) {
       	The Current Weight: {{weight.currentWeight}} </br>
       	Your Goal: {{weight.finalWeight}} </br>
       	The Wedding date is: {{weight.finalDate}} </br>
-      	Daily Calori Allowance: </br>
-      	How Many Day Leaft: </br>
+      	Daily Calori Allowance: {{weight.calori}} </br>
+      	<!--  The final day: </br> -->
       	<br></br>
       	<button ng-click="viewCalendar()" class="button">View Calendar</button><br />
+      	<img src="../Pictures/Female_Calorie_suggested.png" alt="Female Calorie Suggested" style="width:504px;height:400px;"></img>
       	<br></br> 
-      	<img src"../Pictures/foodList.jpg" alt="foodList" style="width:304px;height:228px;"></img>
+      <!-- 	<img src="../Pictures/foodList.jpg" alt="foodList" style="width:680px;height:528px;"></img>     -->
 			<br />
 	</center>     
 	</div>

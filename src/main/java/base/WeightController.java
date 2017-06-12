@@ -37,7 +37,7 @@ public class WeightController implements ApiController<Weight> {
 	public Weight create(@RequestBody Weight input) {
 		//String weddingName, String userNmae ,float currentWeight, float finalWeight, Date finalDate
 	    return weightRepository.save(new Weight( input.getWeddingName() , input.getUserName(), input.getAge(), input.getCurrentWeight(), 
-	    								input.getFinalWeight(),  input.getHeight(),input.getfinalDate()));
+	    								input.getFinalWeight(),  input.getHeight(),input.getfinalDate(), input.getCalori()));
 	}
 
 	@DeleteMapping("{id}")
