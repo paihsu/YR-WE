@@ -49,15 +49,17 @@ Singleton: The object can only be instantiated one time. Repeated calls to its c
 Mediator: It useful in the development of complex forms. It provides central authority over a group of objects by encapsulating how these objects interact.
 
 ---------------------------
-WWP start page:
+This final release is fully functional following with 4 pages:
+
+
 
 <img src="https://raw.githubusercontent.com/cpe305Spring17/spring2017-project-paihsu/master/wwp01.png" />
 
-The weight input page:
+The weight input page: input page for making valuable input
 
 <img src="https://raw.githubusercontent.com/cpe305Spring17/spring2017-project-paihsu/master/wwp02.png" />
 
-The weight Result page:
+The weight Result page: result page for giving the daily calori allowance, user should check the result witht the image under to see if the number make sense (such as +- 500 calori for daily)
 
 <img src="https://raw.githubusercontent.com/cpe305Spring17/spring2017-project-paihsu/master/wwp03.png" />
 
@@ -69,7 +71,10 @@ LogIn to link your Google Calendar and update with it
 
 <img src="https://raw.githubusercontent.com/cpe305Spring17/spring2017-project-paihsu/master/wwp05.png" />
 
-The update result
+The update result: calendar page: this page is use for login user's own google calender. By follwing the result, user starts their own daily update on thier google calender.
+
+Once user need to do the calculation again, they will have a new result, and when they logIn to the google calendar, the user can still see the whole diet path from the from the beginning. 
+WWP start page: home pages to start the web application
 
 <img src="https://raw.githubusercontent.com/cpe305Spring17/spring2017-project-paihsu/master/wwp07.png" />
 
