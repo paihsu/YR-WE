@@ -7,8 +7,6 @@ public class WeightTest {
 
 	 @Test
 	  public void weightInpuTest() {
-		 //String weddingName, String userNmae , String age, String currentWeight, 
-		 //String finalWeight, String height, String finalDate, float calori
 		 Weight weight = new Weight("Testing Wedding Name", "Zoey", "33", "100", "90", "50",
 				 "10,10,2000", 2000);
 		 assert(weight.getWeddingName().equals("Testing Wedding Name"));
