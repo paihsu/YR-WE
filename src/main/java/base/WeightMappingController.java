@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@Controller // so framework can recognize this as a controller class
+@Controller 
 @RequestMapping("/views")
 public class WeightMappingController {
 

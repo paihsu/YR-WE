@@ -8,7 +8,6 @@ import base.WeightRepositoryMemory;
 
 public class WeightControllerTest {
 	
-	
 	@Test
 	public void baseTest() {
 		WeightController controller = new WeightController(new WeightRepositoryMemory());
