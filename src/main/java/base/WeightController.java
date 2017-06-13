@@ -24,7 +24,6 @@ public class WeightController implements ApiController<Weight> {
 	@GetMapping
     public ArrayList<Weight> listAll() {
         ArrayList<Weight> weights = new ArrayList<>();
-       // weightRepository.findAll().forEach(weight -> (weights.add(weight)));
         return weights;
     }
 
@@ -51,11 +50,28 @@ public class WeightController implements ApiController<Weight> {
         if (weight == null) {
             return null;
         } else {
-        	/* work for daily update...
-            weight.setCurrentWeight(input.getCurrentWeight());
-            weight.setDate(input.getDate());
-            weight.setId(input.getId());
-            */
+        	if(input.getAge() != null) {
+        		weight.setAge(input.getAge());
+        	}
+        	if(input.getCurrentWeight() != null) {
+        		weight.setCurrentWeight(input.getCurrentWeight());
+        	}
+        	if(input.getfinalDate() != null) {
+        		weight.setfinalDate(input.getfinalDate());
+        	}
+        	if(input.getFinalWeight() != null) {
+        		weight.setFinalWeight(input.getFinalWeight());
+        	}
+        	if(input.getHeight() != null) {
+        		weight.setHeight(input.getHeight());
+        	}
+        	if(input.getUserName() != null) {
+        		weight.setUserName(input.getUserName());
+        	}
+        	if(input.getWeddingName()!= null) {
+        		weight.setWeddingName(input.getWeddingName());
+        	}
+        		
             return weightRepository.save(weight);
         }
     }

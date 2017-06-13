@@ -6,7 +6,7 @@ import org.junit.Test;
 public class WeightTest {
 
 	 @Test
-	  public void weightInput() {
+	  public void weightInpuTest() {
 		 //String weddingName, String userNmae , String age, String currentWeight, 
 		 //String finalWeight, String height, String finalDate, float calori
 		 Weight weight = new Weight("Testing Wedding Name", "Zoey", "33", "100", "90", "50",
@@ -19,4 +19,13 @@ public class WeightTest {
 		 assert(weight.getHeight().equals("50"));
 		 assert(weight.getfinalDate().equals("10,10,2000"));
 	 }
+	 
+	 @Test
+	  public void setInput() {
+		 Weight weight = new Weight("Testing Wedding Name", "Zoey", "33", "100", "90", "50",
+				 "10,10,2000", 2000);
+		 weight.setfinalDate("10,10,2000");
+		 assertTrue(weight.getfinalDate() == "10,10,2000"); 
+	 }
+	 
 }
