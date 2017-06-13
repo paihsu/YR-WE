@@ -6,7 +6,6 @@ import org.junit.Test;
 
 public class CaloriAllowanceTest {
 	
-	
 	@Test
 	public void TestCaloriAllow(){
 		CaloriAllowance cal = new CaloriAllowance();
