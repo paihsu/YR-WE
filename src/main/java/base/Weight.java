@@ -27,7 +27,6 @@ public class Weight implements Serializable{
 		this.userName = userNmae;
 		this.height = height;
 		this.age = age;
-		//
 		this.calori = calori;
 	}
 	
