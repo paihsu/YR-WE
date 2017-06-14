@@ -18,28 +18,44 @@ var app = angular.module('WeightDataApp',[]);
 
 app.controller('WeightDataCtrl', function($scope, $http) {
 	
+	// Pai: 6/2/17
+	$scope.weight = {};
 	
-	$scope.save = function(weight) {
+	var host = window.location.hostname === 'localhost' ?
+				'http://localhost:8080' : 
+				'https://wwp-305-project.herokuapp.com'
+				var url = window.location.href.split('id=');
+				if (url.length > 1) {
+				      $scope.id = url[1];
+				      $http({
+				         method: 'GET',
+				         url: host + '/weight/' + $scope.id
+				      }).then(function(response) {
+				         $scope.weight = response.data;
+				      });
+				   }
+	
+	$scope.save = function() {
   		var postRequest = {
   			method: 'POST',
-  			url:(window.location.hostname === 'localhost' ? 
-				'http://localhost:8080/weight' : 
-				'https://wwp-305-project.herokuapp.com/weight'),
+  			url: host + '/weight',
 			data: {
 				weddingName: $scope.weight.weddingName,
 				userName: $scope.weight.userName,
+				age:  $scope.weight.age,
 				currentWeight: $scope.weight.currentWeight,
 				finalWeight: $scope.weight.finalWeight,
-				finalDate: $scope.weight.finalDate
+				height: $scope.weight.height,
+				finalDate: $scope.weight.finalDate,
 			}
   		}
+  		if ($scope.id !== null) {
+            postRequest.data.id = $scope.id;
+         }
   		$http(postRequest).then(function (response) {
-  			$scope.weight = response.data;
-			window.location.href = '/WeightResult.html';
-		
+  			window.location.href = '/WeightResult.html#?id=' + response.data.id;
 		});
   	};
-	
 }); //end 
 
 </script>
@@ -53,12 +69,14 @@ app.controller('WeightDataCtrl', function($scope, $http) {
 	<br></br> 
     Who's Wedding:	<input ng-model="weight.weddingName"/> </p>
 	Your Name:	<input ng-model="weight.userName"/> </p>
-	Your Current Weight:	<input ng-model="weight.currentWeight"/> </p>
-	Your Final Goal:	<input ng-model="weight.finalWeight"/> </p>
+	Your Age:	<input ng-model="weight.age"/> </p>
+	Your Current Weight in pound:	<input ng-model="weight.currentWeight"/> </p>
+	Your Final Goal in pound:	<input ng-model="weight.finalWeight"/> </p>
+	The Height in inches:	<input ng-model="weight.height"/> </p>
 	The Wedding Date:	<input ng-model="weight.finalDate"/> </p>
-	<br></br> 
-	<button ng-click="save(weight)" class="button"> <font size = "5">Submit</button></font> 
 	
+	<br></br> 
+	<button ng-click="save()" class="button"> <font size = "5">Submit</button></font> 
 	</center>
 	</div>
 </body>

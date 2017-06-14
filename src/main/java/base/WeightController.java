@@ -1,17 +1,20 @@
 package base;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import base.WeightRepository;
+
+import base.Weight;
+
 @RestController
 @CrossOrigin
 @RequestMapping("/weight")
-public class WeightController {
-
+public class WeightController implements ApiController<Weight> {
+	
 	private final WeightRepository weightRepository;
 	
 	public WeightController(WeightRepository weightRepository) {
@@ -21,7 +24,6 @@ public class WeightController {
 	@GetMapping
     public ArrayList<Weight> listAll() {
         ArrayList<Weight> weights = new ArrayList<>();
-        //weightRepository.findAll().forEach(weight -> (weights.add(weight)));
         return weights;
     }
 
@@ -33,8 +35,8 @@ public class WeightController {
 	@PostMapping
 	public Weight create(@RequestBody Weight input) {
 		//String weddingName, String userNmae ,float currentWeight, float finalWeight, Date finalDate
-	    return weightRepository.save(new Weight( input.getWeddingName() , input.getUserName(),input.getCurrentWeight(), 
-	    								input.getFinalWeight(), input.getfinalDate()));
+	    return weightRepository.save(new Weight( input.getWeddingName() , input.getUserName(), input.getAge(), input.getCurrentWeight(), 
+	    								input.getFinalWeight(),  input.getHeight(),input.getfinalDate(), input.getCalori()));
 	}
 
 	@DeleteMapping("{id}")
@@ -48,11 +50,28 @@ public class WeightController {
         if (weight == null) {
             return null;
         } else {
-        	/* work for daily update...
-            weight.setCurrentWeight(input.getCurrentWeight());
-            weight.setDate(input.getDate());
-            weight.setId(input.getId());
-            */
+        	if(input.getAge() != null) {
+        		weight.setAge(input.getAge());
+        	}
+        	if(input.getCurrentWeight() != null) {
+        		weight.setCurrentWeight(input.getCurrentWeight());
+        	}
+        	if(input.getfinalDate() != null) {
+        		weight.setfinalDate(input.getfinalDate());
+        	}
+        	if(input.getFinalWeight() != null) {
+        		weight.setFinalWeight(input.getFinalWeight());
+        	}
+        	if(input.getHeight() != null) {
+        		weight.setHeight(input.getHeight());
+        	}
+        	if(input.getUserName() != null) {
+        		weight.setUserName(input.getUserName());
+        	}
+        	if(input.getWeddingName()!= null) {
+        		weight.setWeddingName(input.getWeddingName());
+        	}
+        		
             return weightRepository.save(weight);
         }
     }

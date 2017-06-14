@@ -27,7 +27,6 @@ public class WeightRepositoryMemory implements WeightRepository{
 		      this.weights.put(weight.getId(), weight);
 		    }
 		    return weight;
-		
 	}
 
 	@Override
@@ -42,7 +41,6 @@ public class WeightRepositoryMemory implements WeightRepository{
 
 	@Override
 	public List<Weight> save(List<Weight> weights) {
-		// TODO Auto-generated method stub
 		for(Weight w:weights)
 			save(w);
 		return weights;
